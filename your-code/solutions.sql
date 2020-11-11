@@ -70,6 +70,7 @@ LIMIT 3;
 /*
 Challenge 2 - Alternative Solution
 */
+-- Create the first temporary table
 DROP TABLE royal_agg;
 CREATE TEMPORARY TABLE royal_agg
 SELECT 
@@ -87,6 +88,7 @@ FROM
 -- Check the first table
 SELECT * FROM royal_agg;
 
+-- Create the second temporary table
 DROP TABLE total_profits;
 CREATE TEMPORARY TABLE total_profits
 SELECT ra.title_id, ra.au_id, SUM(ra.advance) AS total_advance, SUM(ra.sales_royalty) AS sales_royalty 
